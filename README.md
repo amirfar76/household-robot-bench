@@ -2,8 +2,6 @@
 
 A lightweight, text-based household manipulation benchmark for evaluating LLM agents on multi-step planning tasks. Inspired by the [SayCan](https://say-can.github.io/) task taxonomy (Ahn et al., 2022).
 
-Used in the paper **"Think Short, Defer Smart, Act, and Repeat: Calibrated Reasoning and Uncertainty-Aware Deferral for Edge LLM Agents"** (ICLR 2026).
-
 ## Overview
 
 A robot navigates a four-room house (kitchen, living room, bedroom, bathroom) and manipulates household objects to complete tasks from four families:
@@ -103,20 +101,7 @@ Episodes are generated deterministically:
 ep_seed = base_seed + episode_idx * 1000 + seed
 ```
 
-Use `task.reset_to(episode_idx)` to reproduce any specific episode. The default `base_seed=31337` and `seed=0` reproduce the episodes used in the paper.
-
-## Citation
-
-```bibtex
-@inproceedings{farzaneh2026tsds,
-  title     = {Think Short, Defer Smart, Act, and Repeat:
-               Calibrated Reasoning and Uncertainty-Aware Deferral
-               for Edge {LLM} Agents},
-  author    = {Anonymous},
-  booktitle = {International Conference on Learning Representations (ICLR)},
-  year      = {2026},
-}
-```
+Use `task.reset_to(episode_idx)` to reproduce any specific episode.
 
 ## License
 
